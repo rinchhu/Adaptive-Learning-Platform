@@ -1,0 +1,687 @@
+{
+  "Variables": {
+    "Easy": [
+      {
+        "question": "Which operator is used to assign a value to a variable in Python?",
+        "options": ["==", "=", "->", ":="],
+        "answer": 1,
+        "hint": "Think about single equals versus double equals.",
+        "explanation": "The single equals sign '=' is the assignment operator in Python, used to store values into variables."
+      },
+      {
+        "question": "Which of the following is a VALID variable name in Python?",
+        "options": ["2nd_student", "student_name", "student-name", "student name"],
+        "answer": 1,
+        "hint": "Variable names cannot start with numbers and cannot contain hyphens or spaces.",
+        "explanation": "Variable names can contain letters, numbers, and underscores, but cannot start with a digit or contain hyphens or spaces."
+      },
+      {
+        "question": "Are variable names in Python case-sensitive?",
+        "options": [
+          "Yes, 'num' and 'NUM' are different variables",
+          "No, Python ignores capitalization",
+          "Only when using numbers",
+          "Only inside functions"
+        ],
+        "answer": 0,
+        "hint": "Python treats lowercase and uppercase identifiers differently.",
+        "explanation": "Python is strictly case-sensitive. 'num', 'Num', and 'NUM' refer to three distinct variables."
+      },
+      {
+        "question": "What is the output of: x = 5; print(type(x))?",
+        "options": ["<class 'int'>", "<class 'str'>", "<class 'float'>", "<class 'number'>"],
+        "answer": 0,
+        "hint": "5 is a whole number without decimals.",
+        "explanation": "In Python, whole numbers are automatically typed as integers (int)."
+      },
+      {
+        "question": "Which symbol is used for writing single-line comments in Python?",
+        "options": ["//", "/*", "#", "--"],
+        "answer": 2,
+        "hint": "It is also known as the hash or pound symbol.",
+        "explanation": "The '#' character starts a single-line comment in Python."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "What is the output of the following code?\nx = 10\ny = x\nx = 20\nprint(y)",
+        "options": ["10", "20", "None", "Error"],
+        "answer": 0,
+        "hint": "Integers are immutable; y holds the value assigned to it at that moment.",
+        "explanation": "Integers are immutable. 'y' was assigned the value 10 from 'x'. Changing 'x' to 20 later does not alter 'y'."
+      },
+      {
+        "question": "Which keyword can NOT be used as a variable name in Python?",
+        "options": ["count", "pass", "total", "value"],
+        "answer": 1,
+        "hint": "It is a reserved Python keyword used as a no-operation placeholder.",
+        "explanation": "'pass' is a reserved keyword in Python used as a null placeholder statement, so it cannot be an identifier."
+      },
+      {
+        "question": "What will be stored in 'a' and 'b' after executing: a, b = 5, 10?",
+        "options": ["a = 10, b = 5", "a = 5, b = 10", "Both become 15", "SyntaxError"],
+        "answer": 1,
+        "hint": "Python unpacks the tuple from left to right.",
+        "explanation": "Python supports multiple assignment (tuple unpacking). Values are mapped left-to-right: a gets 5 and b gets 10."
+      },
+      {
+        "question": "What happens when you reassign a variable to a different data type (e.g., x = 10 then x = 'Ten')?",
+        "options": [
+          "Python raises a TypeError",
+          "Python successfully dynamically re-types the variable",
+          "Requires explicit type casting",
+          "The program crashes"
+        ],
+        "answer": 1,
+        "hint": "Python is a dynamically typed language.",
+        "explanation": "Python is dynamically typed; variables are merely pointers to objects, so their type can change dynamically at runtime."
+      },
+      {
+        "question": "What is the value of result after: a = b = c = 50?",
+        "options": [
+          "All three variables reference 50",
+          "Only c is 50",
+          "SyntaxError",
+          "Only a is 50"
+        ],
+        "answer": 0,
+        "hint": "Chained assignment sets all variables to the rightmost expression.",
+        "explanation": "Chained assignment assigns the same object reference (50) to a, b, and c simultaneously."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "What happens when executing:\nx = 5\ndef test():\n    print(x)\n    x = 10\ntest()",
+        "options": [
+          "Prints 5 then sets x to 10",
+          "UnboundLocalError: local variable 'x' referenced before assignment",
+          "Prints 10",
+          "SyntaxError"
+        ],
+        "answer": 1,
+        "hint": "Python determines variable scope at compile time based on assignments inside the function.",
+        "explanation": "Because 'x = 10' exists inside 'test()', Python treats 'x' as local to the entire function. Attempting to print it before assignment raises UnboundLocalError."
+      },
+      {
+        "question": "How can you swap the values of two variables 'a' and 'b' in one line in Python?",
+        "options": ["swap(a, b)", "a, b = b, a", "a = b; b = a", "a == b"],
+        "answer": 1,
+        "hint": "Tuple packing and unpacking happens atomically.",
+        "explanation": "'a, b = b, a' creates a temporary tuple of (b, a) on the right side and unpacks it back to a and b simultaneously."
+      },
+      {
+        "question": "What does id(x) return in Python?",
+        "options": [
+          "The data type of x",
+          "The unique memory address / identity integer of the object referenced by x",
+          "The length of variable x",
+          "The scope level of variable x"
+        ],
+        "answer": 1,
+        "hint": "It is unique and constant for the object during its lifetime.",
+        "explanation": "The id() function returns the unique integer representing the identity/memory address of the object during its lifetime."
+      },
+      {
+        "question": "What is the output of:\na = [1, 2]\nb = a\nb.append(3)\nprint(a)",
+        "options": ["[1, 2]", "[1, 2, 3]", "None", "Error"],
+        "answer": 1,
+        "hint": "Lists are mutable objects; b and a point to the exact same list in memory.",
+        "explanation": "Because lists are mutable objects, 'b = a' creates a reference alias. Modifying 'b' directly affects 'a'."
+      },
+      {
+        "question": "What does Python's walrus operator (:=) do?",
+        "options": [
+          "Compares two variables for strict identity",
+          "Assigns values to variables as part of a larger expression",
+          "Deletes a variable from memory",
+          "Checks if variable is null"
+        ],
+        "answer": 1,
+        "hint": "Introduced in Python 3.8 for assignment expressions.",
+        "explanation": "The walrus operator (:=) allows assignment of variables directly inside an expression, such as inside a while or if condition."
+      }
+    ]
+  },
+  "Data Types": {
+    "Easy": [
+      {
+        "question": "Which built-in Python function returns the data type of an object?",
+        "options": ["typeof()", "type()", "dtype()", "check()"],
+        "answer": 1,
+        "hint": "It takes the object as an argument and returns its class.",
+        "explanation": "The type() function is the standard Python built-in for checking an object's type."
+      },
+      {
+        "question": "What data type is the value 3.14159 in Python?",
+        "options": ["int", "float", "decimal", "double"],
+        "answer": 1,
+        "hint": "Numbers with decimal fractions in Python.",
+        "explanation": "In Python, numbers with decimal points are represented by the 'float' data type."
+      },
+      {
+        "question": "What are the two valid boolean values in Python?",
+        "options": ["true and false", "TRUE and FALSE", "True and False", "1 and 0 only"],
+        "answer": 2,
+        "hint": "Capitalization matters for boolean literals.",
+        "explanation": "Python's boolean literals are capitalized: 'True' and 'False'."
+      },
+      {
+        "question": "Which of these is a string literal in Python?",
+        "options": ["100", "True", "\"Hello, World!\"", "3.14"],
+        "answer": 2,
+        "hint": "Strings are enclosed in quotes.",
+        "explanation": "Strings in Python are surrounded by single or double quotation marks."
+      },
+      {
+        "question": "What is the result of len(\"Python\")?",
+        "options": ["5", "6", "7", "Error"],
+        "answer": 1,
+        "hint": "Count the characters in P-y-t-h-o-n.",
+        "explanation": "The len() function returns the total number of characters in the string, which is 6."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "What is the result of expression: type(10 / 2)?",
+        "options": ["<class 'int'>", "<class 'float'>", "<class 'number'>", "<class 'str'>"],
+        "answer": 1,
+        "hint": "Division / always produces a float in Python 3.",
+        "explanation": "In Python 3, standard division (/) always returns a float (10 / 2 yields 5.0)."
+      },
+      {
+        "question": "What will int(\"25\") + 5 evaluate to in Python?",
+        "options": ["\"255\"", "30", "TypeError", "25.5"],
+        "answer": 1,
+        "hint": "int() converts numeric string to a number.",
+        "explanation": "int(\"25\") converts the string \"25\" to the integer 25. Adding 5 results in 30."
+      },
+      {
+        "question": "What does bool(0) and bool(\"\") return?",
+        "options": ["True and True", "False and False", "True and False", "False and True"],
+        "answer": 1,
+        "hint": "Zero and empty strings are falsy in Python.",
+        "explanation": "In Python, numeric 0 and empty strings \"\" are falsy values, evaluating to False."
+      },
+      {
+        "question": "What is the operator for integer (floor) division in Python?",
+        "options": ["/", "//", "%", "^"],
+        "answer": 1,
+        "hint": "Double slash rounds down to the nearest integer.",
+        "explanation": "The '//' operator performs floor division, discarding the fractional part."
+      },
+      {
+        "question": "What is the output of: print(\"Python\" * 2)?",
+        "options": ["Python2", "PythonPython", "TypeError", "['Python', 'Python']"],
+        "answer": 1,
+        "hint": "Multiplying a string by an integer repeats it.",
+        "explanation": "The '*' operator when used between a string and an integer performs string repetition."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "What is the result of: bool([]) == bool([0])?",
+        "options": [
+          "True (both evaluate to False)",
+          "False ([] is False, while [0] is non-empty so it is True)",
+          "TypeError",
+          "True (both evaluate to True)"
+        ],
+        "answer": 1,
+        "hint": "Empty collections are False; collections with any elements are True.",
+        "explanation": "An empty list [] is falsy. A list containing 0 ([0]) is non-empty, so it is truthy. False == True is False."
+      },
+      {
+        "question": "Which of the following Python data types is IMMUTABLE?",
+        "options": ["list", "dict", "set", "tuple"],
+        "answer": 3,
+        "hint": "Its values cannot be modified in-place once defined.",
+        "explanation": "Tuples (along with int, float, str, bool) are immutable; their contents cannot be changed after creation."
+      },
+      {
+        "question": "What is the value of 0.1 + 0.2 == 0.3 in Python?",
+        "options": [
+          "True",
+          "False (due to IEEE 754 floating-point representation limits)",
+          "TypeError",
+          "None"
+        ],
+        "answer": 1,
+        "hint": "Binary floats cannot represent some decimal fractions exactly.",
+        "explanation": "Due to binary floating-point representation, 0.1 + 0.2 evaluates to ~0.30000000000000004, so equality is False."
+      },
+      {
+        "question": "What does sys.getsizeof() return for an empty list vs empty tuple?",
+        "options": [
+          "Lists always consume more memory than tuples",
+          "Tuples always consume more memory than lists",
+          "Both consume exactly zero bytes",
+          "They have identical memory footprints"
+        ],
+        "answer": 0,
+        "hint": "Lists over-allocate memory to allow dynamic append operations.",
+        "explanation": "Lists require extra memory over-allocation to allow efficient resizing and element addition, while tuples are fixed-size and more compact."
+      },
+      {
+        "question": "What is the output of: type(...) in Python?",
+        "options": ["<class 'ellipsis'>", "<class 'NoneType'>", "SyntaxError", "<class 'object'>"],
+        "answer": 0,
+        "hint": "Three dots '...' is a singleton object in Python.",
+        "explanation": "The '...' literal represents the built-in Ellipsis singleton, whose type is <class 'ellipsis'>."
+      }
+    ]
+  },
+  "Conditional Statements": {
+    "Easy": [
+      {
+        "question": "Which keyword is used for 'else if' conditions in Python?",
+        "options": ["elseif", "else if", "elif", "case"],
+        "answer": 2,
+        "hint": "A contraction of else and if.",
+        "explanation": "Python uses the keyword 'elif' as the shorthand for 'else if'."
+      },
+      {
+        "question": "Which operator checks if two values are equal in Python?",
+        "options": ["=", "==", "===", "equals"],
+        "answer": 1,
+        "hint": "Two equals signs together.",
+        "explanation": "'==' is the comparison operator for equality, while '=' is for assignment."
+      },
+      {
+        "question": "How does Python define blocks of code inside an if statement?",
+        "options": ["Curly braces {}", "Indentation (whitespace)", "Parentheses ()", "begin and end keywords"],
+        "answer": 1,
+        "hint": "Spacing at the beginning of the line.",
+        "explanation": "Python uses indentation (standard is 4 spaces) to define code blocks."
+      },
+      {
+        "question": "What will an if statement do if its condition evaluates to True?",
+        "options": [
+          "Execute the indented block of code",
+          "Skip to the else clause",
+          "Exit the program",
+          "Raise an error"
+        ],
+        "answer": 0,
+        "hint": "True conditions run the immediate block.",
+        "explanation": "When an if condition evaluates to True, Python executes the indented block beneath it."
+      },
+      {
+        "question": "Which logical operator returns True only if BOTH conditions are True?",
+        "options": ["or", "and", "not", "xor"],
+        "answer": 1,
+        "hint": "Conjunction of two truths.",
+        "explanation": "The 'and' operator requires both operands to be True to yield True."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "What will be printed?\nx = 15\nif x > 20:\n    print(\"High\")\nelif x > 10:\n    print(\"Medium\")\nelse:\n    print(\"Low\")",
+        "options": ["High", "Medium", "Low", "Nothing"],
+        "answer": 1,
+        "hint": "Check the conditions sequentially from top to bottom.",
+        "explanation": "15 is not > 20, but 15 > 10 is True, so 'Medium' is printed."
+      },
+      {
+        "question": "What does the expression (True or False) and not (False) evaluate to?",
+        "options": ["True", "False", "None", "Error"],
+        "answer": 0,
+        "hint": "Break down each bracket.",
+        "explanation": "(True or False) is True. not (False) is True. True and True evaluates to True."
+      },
+      {
+        "question": "What is the output of: a, b = 5, 10; print(\"Yes\" if a > b else \"No\")",
+        "options": ["Yes", "No", "SyntaxError", "True"],
+        "answer": 1,
+        "hint": "Python's ternary operator: true_value if condition else false_value.",
+        "explanation": "This is Python's ternary conditional expression. Since 5 > 10 is False, it returns 'No'."
+      },
+      {
+        "question": "What is the output of: if not '': print('Empty')?",
+        "options": ["Empty", "Nothing printed", "TypeError", "False"],
+        "answer": 0,
+        "hint": "An empty string is falsy; 'not' inverts it.",
+        "explanation": "An empty string \"\" is falsy, so 'not \"\"' evaluates to True, executing print('Empty')."
+      },
+      {
+        "question": "Can an 'if' statement exist without an 'else' block in Python?",
+        "options": [
+          "Yes, 'else' is completely optional",
+          "No, 'else' is mandatory in every if statement",
+          "Only if there is an 'elif' statement",
+          "Only inside functions"
+        ],
+        "answer": 0,
+        "hint": "'else' is a fallback, not a strict requirement.",
+        "explanation": "The 'else' clause is optional. If conditions are False and no 'else' is provided, execution simply continues."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "What is the output of: print(10 and 20 or 30)?",
+        "options": ["True", "10", "20", "30"],
+        "answer": 2,
+        "hint": "Python's logical operators return the value of the operand that determined the result.",
+        "explanation": "Short-circuit evaluation: '10 and 20' evaluates to 20 (since 10 is truthy). Then '20 or 30' stops and returns 20."
+      },
+      {
+        "question": "What is the difference between '==' and 'is' in Python conditional checks?",
+        "options": [
+          "'==' checks memory address, 'is' checks values",
+          "'==' checks value equality, 'is' checks identity (same memory address)",
+          "They are identical synonyms",
+          "'is' is only for strings"
+        ],
+        "answer": 1,
+        "hint": "Think of identity (object ID) vs value equality.",
+        "explanation": "'==' tests value equality, whereas 'is' tests if both variables point to the exact same object in memory."
+      },
+      {
+        "question": "What will this code print?\nval = None\nif val:\n    print(\"A\")\nelif val is None:\n    print(\"B\")\nelse:\n    print(\"C\")",
+        "options": ["A", "B", "C", "TypeError"],
+        "answer": 1,
+        "hint": "Check the identity of None.",
+        "explanation": "'val' is None (falsy), so first if fails. 'val is None' is True, so 'B' is printed."
+      },
+      {
+        "question": "What does chained comparison 1 < 2 < 3 evaluate to in Python?",
+        "options": [
+          "True (equivalent to 1 < 2 and 2 < 3)",
+          "False",
+          "SyntaxError",
+          "Returns 3"
+        ],
+        "answer": 0,
+        "hint": "Python automatically chains relational comparisons with an implicit 'and'.",
+        "explanation": "Python automatically converts '1 < 2 < 3' into '1 < 2 and 2 < 3', which evaluates to True."
+      },
+      {
+        "question": "What is the result of: bool('False')?",
+        "options": ["True", "False", "None", "Error"],
+        "answer": 0,
+        "hint": "A non-empty string is always truthy, regardless of the text inside.",
+        "explanation": "Any non-empty string in Python evaluates to True, even if the characters inside spell 'False'."
+      }
+    ]
+  },
+  "Loops": {
+    "Easy": [
+      {
+        "question": "Which loop is typically used when you know the exact number of iterations?",
+        "options": ["while loop", "for loop", "do-while loop", "repeat loop"],
+        "answer": 1,
+        "hint": "Iterates over a finite sequence.",
+        "explanation": "A 'for' loop is designed to iterate over a specified sequence or range of numbers."
+      },
+      {
+        "question": "What does range(1, 4) generate?",
+        "options": ["1, 2, 3, 4", "1, 2, 3", "2, 3, 4", "0, 1, 2, 3"],
+        "answer": 1,
+        "hint": "Range stops before the end value.",
+        "explanation": "The range(start, stop) function stops BEFORE 'stop' (4), generating 1, 2, 3."
+      },
+      {
+        "question": "Which statement terminates the entire loop immediately?",
+        "options": ["continue", "break", "pass", "stop"],
+        "answer": 1,
+        "hint": "It breaks out of the loop.",
+        "explanation": "The 'break' statement immediately exits the loop enclosing it."
+      },
+      {
+        "question": "What condition must be met for a while loop to continue running?",
+        "options": [
+          "Its condition must evaluate to True",
+          "Its condition must evaluate to False",
+          "It must contain a break statement",
+          "It must run at least 10 times"
+        ],
+        "answer": 0,
+        "hint": "While something is true, keep repeating.",
+        "explanation": "A while loop executes repeatedly as long as its test condition evaluates to True."
+      },
+      {
+        "question": "Which statement skips the rest of the current iteration and goes to the next?",
+        "options": ["continue", "pass", "skip", "next"],
+        "answer": 0,
+        "hint": "Continues with the next cycle.",
+        "explanation": "'continue' bypasses remaining lines in the loop body and starts the next iteration."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "What is printed by: for i in range(3): print(i, end=' ')?",
+        "options": ["1 2 3 ", "0 1 2 ", "0 1 2 3 ", "3 2 1 "],
+        "answer": 1,
+        "hint": "Range with one argument defaults start to 0.",
+        "explanation": "range(3) defaults start to 0 and stops before 3, producing 0, 1, 2."
+      },
+      {
+        "question": "What does the 'continue' keyword do inside a loop?",
+        "options": [
+          "Stops the program",
+          "Skips the rest of current iteration and jumps to the next cycle",
+          "Restarts the loop",
+          "Breaks out of all loops"
+        ],
+        "answer": 1,
+        "hint": "Skips ahead to the next cycle.",
+        "explanation": "'continue' skips remaining statements in the current iteration and advances directly to the next."
+      },
+      {
+        "question": "How many times does this loop run?\ni = 1\nwhile i < 10:\n    i += 3",
+        "options": ["3 times", "4 times", "9 times", "10 times"],
+        "answer": 0,
+        "hint": "Trace i values: 1, 4, 7, 10.",
+        "explanation": "Runs with i=1 (becomes 4), i=4 (becomes 7), i=7 (becomes 10). Then condition fails. Runs 3 times."
+      },
+      {
+        "question": "What is the output of range(0, 10, 2)?",
+        "options": ["0, 2, 4, 6, 8", "0, 2, 4, 6, 8, 10", "2, 4, 6, 8, 10", "1, 3, 5, 7, 9"],
+        "answer": 0,
+        "hint": "Start=0, Step=2, Stop before 10.",
+        "explanation": "Starting at 0 with a step of 2 gives 0, 2, 4, 6, 8 (stopping before 10)."
+      },
+      {
+        "question": "What will happen if a while loop's condition never becomes False and has no break?",
+        "options": [
+          "It creates an infinite loop",
+          "Python terminates it after 100 iterations",
+          "It raises a RecursionError",
+          "It returns None"
+        ],
+        "answer": 0,
+        "hint": "It repeats without stopping.",
+        "explanation": "Without a terminating condition or break statement, the loop runs indefinitely (infinite loop)."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "When does the 'else' block of a Python loop execute?",
+        "options": [
+          "When the loop terminates normally without encountering a 'break'",
+          "Only when the loop encounters a 'break'",
+          "At every single iteration",
+          "Only on error"
+        ],
+        "answer": 0,
+        "hint": "It executes on natural completion of the loop.",
+        "explanation": "In Python, a loop's 'else' clause executes only when the loop completes naturally without a 'break'."
+      },
+      {
+        "question": "What is the output of:\nfor i in range(1, 4):\n    if i == 2: continue\n    print(i, end=' ')",
+        "options": ["1 2 3 ", "1 3 ", "2 ", "1 "],
+        "answer": 1,
+        "hint": "i == 2 is skipped.",
+        "explanation": "When i == 2, continue skips printing. Only 1 and 3 are printed: '1 3 '."
+      },
+      {
+        "question": "What will happen with: while True: pass?",
+        "options": ["Terminates after 1 loop", "Raises SyntaxError", "Runs an infinite loop until interrupted", "Executes once and exits"],
+        "answer": 2,
+        "hint": "Condition never changes from True.",
+        "explanation": "Because 'True' is always met and no break is present, it continues indefinitely."
+      },
+      {
+        "question": "How can you iterate over both the index and value of a list simultaneously?",
+        "options": [
+          "Using enumerate(my_list)",
+          "Using zip(my_list)",
+          "Using index(my_list)",
+          "Using items(my_list)"
+        ],
+        "answer": 0,
+        "hint": "Built-in function for (index, item) pairs.",
+        "explanation": "The enumerate() function yields tuples of (index, item) at each iteration step."
+      },
+      {
+        "question": "What is the output of:\nfor i in range(3):\n    pass\nprint(i)",
+        "options": ["2", "3", "Error (i is out of scope)", "None"],
+        "answer": 0,
+        "hint": "In Python, loop variables do NOT have block scope; they leak into the enclosing scope.",
+        "explanation": "Python loop variables persist in the outer scope after loop completion with their last assigned value (2)."
+      }
+    ]
+  },
+  "Functions": {
+    "Easy": [
+      {
+        "question": "Which keyword is used to define a function in Python?",
+        "options": ["function", "func", "def", "define"],
+        "answer": 2,
+        "hint": "Short for define.",
+        "explanation": "The 'def' keyword (short for define) is used to create functions in Python."
+      },
+      {
+        "question": "Which statement sends a value back from a function to the caller?",
+        "options": ["output", "send", "return", "give"],
+        "answer": 2,
+        "hint": "Returns the computation result.",
+        "explanation": "The 'return' statement passes a computed result back to the caller."
+      },
+      {
+        "question": "What does a function return if it does not have an explicit return statement?",
+        "options": ["0", "False", "None", "Error"],
+        "answer": 2,
+        "hint": "Python's default absence-of-value object.",
+        "explanation": "In Python, a function without a return statement automatically returns None."
+      },
+      {
+        "question": "How do you call/execute a function named 'greet'?",
+        "options": ["greet", "greet()", "call greet", "run greet"],
+        "answer": 1,
+        "hint": "Use parentheses after the name.",
+        "explanation": "Parentheses '()' are the invocation operator used to call functions."
+      },
+      {
+        "question": "What are the variables listed inside the parentheses of a function definition called?",
+        "options": ["Arguments", "Parameters", "Globals", "Constants"],
+        "answer": 1,
+        "hint": "Defined in the function signature.",
+        "explanation": "Variables declared in the function header are called parameters; values supplied when calling it are arguments."
+      }
+    ],
+    "Medium": [
+      {
+        "question": "What is the output of:\ndef greet(name='Friend'):\n    return f'Hello, {name}'\nprint(greet())",
+        "options": ["Hello, Friend", "Hello, ", "TypeError", "Hello, None"],
+        "answer": 0,
+        "hint": "When no argument is given, default value is used.",
+        "explanation": "'name=\"Friend\"' defines a default parameter value used when no argument is supplied."
+      },
+      {
+        "question": "What is the output of:\ndef add(a, b):\n    return a + b\nprint(add('5', '10'))",
+        "options": ["15", "510", "TypeError", "5 10"],
+        "answer": 1,
+        "hint": "Arguments are strings, not integers.",
+        "explanation": "Because '5' and '10' are strings, '+' performs string concatenation, resulting in '510'."
+      },
+      {
+        "question": "What is the scope of a variable created inside a function?",
+        "options": ["Global scope", "Local scope (accessible only inside that function)", "Universal scope", "Class scope only"],
+        "answer": 1,
+        "hint": "Limited to the function body.",
+        "explanation": "Variables initialized inside a function have local scope and cannot be accessed from outside."
+      },
+      {
+        "question": "Can a Python function return multiple values separated by commas (e.g. return x, y)?",
+        "options": [
+          "Yes, it returns them packed inside a tuple",
+          "No, Python functions can only return a single primitive",
+          "Only if they are numbers",
+          "Requires the 'multi' keyword"
+        ],
+        "answer": 0,
+        "hint": "Tuple packing occurs automatically.",
+        "explanation": "Returning multiple comma-separated items packs them into a single tuple object."
+      },
+      {
+        "question": "What is a lambda function in Python?",
+        "options": [
+          "A small anonymous, single-expression function",
+          "A function that runs on a remote server",
+          "A function that repeats indefinitely",
+          "A mathematical constant"
+        ],
+        "answer": 0,
+        "hint": "Created using the 'lambda' keyword.",
+        "explanation": "Lambda functions are compact, anonymous inline functions restricted to a single expression."
+      }
+    ],
+    "Hard": [
+      {
+        "question": "What is the danger of using a mutable default argument like def f(target=[]):?",
+        "options": [
+          "SyntaxError on startup",
+          "The default list is created once at function definition and shared across subsequent calls",
+          "Forces all items to strings",
+          "Python auto clears it"
+        ],
+        "answer": 1,
+        "hint": "Default arguments are evaluated once at definition time.",
+        "explanation": "Default arguments are evaluated once at definition time. A mutable default like [] persists changes across calls."
+      },
+      {
+        "question": "What do *args and **kwargs allow a function to accept?",
+        "options": [
+          "*args accepts arbitrary positional args (tuple), **kwargs accepts keyword args (dict)",
+          "Multiplies and divides numbers",
+          "Only accept integers",
+          "Deprecated syntax"
+        ],
+        "answer": 0,
+        "hint": "Variable number of positional and keyword arguments.",
+        "explanation": "*args packs excess positional arguments into a tuple, while **kwargs packs excess keyword arguments into a dictionary."
+      },
+      {
+        "question": "What keyword allows modifying a global variable from inside a function?",
+        "options": ["outer", "nonlocal", "global", "extern"],
+        "answer": 2,
+        "hint": "Tells Python to look in the module namespace.",
+        "explanation": "The 'global' keyword explicitly informs Python that a variable inside the function refers to the module-level global variable."
+      },
+      {
+        "question": "What is the purpose of the 'nonlocal' keyword in Python?",
+        "options": [
+          "Allows modifying a variable in the nearest enclosing non-global scope (nested functions)",
+          "Declares a variable as universal",
+          "Exports a variable to other files",
+          "Prevents a variable from being deleted"
+        ],
+        "answer": 0,
+        "hint": "Used inside nested closures to rebind outer non-global variables.",
+        "explanation": "'nonlocal' binds an identifier to an outer enclosing function's local scope rather than creating a new local variable."
+      },
+      {
+        "question": "What is a decorator in Python?",
+        "options": [
+          "A function that takes another function as input and extends its behavior without modifying it",
+          "A visual UI theme component",
+          "A comment tag for documentation",
+          "A syntax highlighter"
+        ],
+        "answer": 0,
+        "hint": "Prefix with @ symbol above def.",
+        "explanation": "A decorator is a callable that takes a function as argument, wraps it to extend behavior, and returns the modified function."
+      }
+    ]
+  }
+}

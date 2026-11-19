@@ -1,0 +1,89 @@
+{
+  "subjects": [
+    {
+      "id": "python_basics",
+      "name": "Python Basics",
+      "icon": "🐍",
+      "description": "Core foundational programming concepts in Python 3, from variables to modular functions.",
+      "topics": [
+        "Variables",
+        "Data Types",
+        "Conditional Statements",
+        "Loops",
+        "Functions"
+      ]
+    }
+  ],
+  "topics": [
+    {
+      "id": "variables",
+      "subject": "Python Basics",
+      "name": "Variables",
+      "summary": "Variables are named containers used to store data values in memory.",
+      "explanation": "In Python, a variable is created the moment you first assign a value to it using the assignment operator (=).\n\nUnlike many other programming languages, Python has no command for declaring a variable and does not require you to specify the data type. Python automatically detects the type of value assigned.\n\nVariable naming rules:\n1. Variable names must start with a letter or an underscore (_).\n2. They cannot start with a number.\n3. They can only contain alphanumeric characters and underscores (A-z, 0-9, and _).\n4. Variable names are case-sensitive (age, Age, and AGE are three different variables).",
+      "code_example": "# Creating variables in Python\nstudent_name = \"Aarav\"\nage = 19\ngpa = 8.7\nis_enrolled = True\n\n# Displaying variable values\nprint(\"Student Name:\", student_name)\nprint(\"Age:\", age)\nprint(\"Enrolled:\", is_enrolled)\n\n# Reassigning a variable\nage = age + 1\nprint(\"Next year age:\", age)",
+      "key_points": [
+        "Variables store data in computer memory.",
+        "Assignment operator (=) assigns value from right to left.",
+        "Python automatically determines the variable type dynamically.",
+        "Variable names are case-sensitive and must be meaningful."
+      ]
+    },
+    {
+      "id": "data_types",
+      "subject": "Python Basics",
+      "name": "Data Types",
+      "summary": "Data types define the kind of value a variable can hold and how it behaves.",
+      "explanation": "Python provides several built-in data types out of the box. The most common basic data types are:\n\n1. Integer (int): Whole numbers without decimal points (e.g., 10, -5, 0).\n2. Float (float): Numbers with fractional/decimal parts (e.g., 3.14, -0.5).\n3. String (str): Sequences of characters enclosed in single or double quotes (e.g., 'Hello', \"Python\").\n4. Boolean (bool): Represents truth values: either True or False.\n\nYou can use the type() function to check the data type of any object or variable in Python.",
+      "code_example": "# Exploring basic data types\ncount = 25              # int\nprice = 99.50           # float\nlanguage = \"Python\"     # str\nis_active = True        # bool\n\n# Checking types using type()\nprint(type(count))      # <class 'int'>\nprint(type(price))      # <class 'float'>\nprint(type(language))   # <class 'str'>\n\n# Type conversion (casting)\nnum_str = \"100\"\nnum_int = int(num_str)  # Converts string to int\nprint(num_int + 50)     # Output: 150",
+      "key_points": [
+        "int represents whole numbers; float represents numbers with decimals.",
+        "str holds text enclosed in single or double quotes.",
+        "bool holds either True or False.",
+        "Use type() to identify types and int(), float(), str() to convert types."
+      ]
+    },
+    {
+      "id": "conditional_statements",
+      "subject": "Python Basics",
+      "name": "Conditional Statements",
+      "summary": "Conditional statements allow programs to make decisions and execute specific code blocks.",
+      "explanation": "Decision making in Python is performed using 'if', 'elif' (else if), and 'else' statements.\n\nThe condition evaluates to either True or False. If the condition is True, the indented block under it runs; otherwise, Python skips to the next condition or the else block.\n\nPython uses indentation (typically 4 spaces) instead of curly braces to define blocks of code.\n\nComparison operators include: == (equal), != (not equal), > (greater), < (less), >= (greater or equal), <= (less or equal).",
+      "code_example": "# Grade evaluation example\nscore = 85\n\nif score >= 90:\n    grade = \"A+\"\nelif score >= 80:\n    grade = \"A\"\nelif score >= 65:\n    grade = \"B\"\nelse:\n    grade = \"C\"\n\nprint(f\"Your score is {score}, which earns Grade: {grade}\")",
+      "key_points": [
+        "Conditions determine code execution paths based on boolean evaluation.",
+        "Python uses strict indentation (usually 4 spaces) for code blocks.",
+        "Use 'if' for the first check, 'elif' for subsequent checks, and 'else' as fallback.",
+        "Logical operators (and, or, not) allow combining multiple conditions."
+      ]
+    },
+    {
+      "id": "loops",
+      "subject": "Python Basics",
+      "name": "Loops",
+      "summary": "Loops allow repeated execution of a block of code as long as a condition is met.",
+      "explanation": "Python provides two main types of loops:\n\n1. For Loop: Used for iterating over a sequence (such as a list, string, or range of numbers). It is ideal when the number of iterations is known beforehand.\n\n2. While Loop: Executes as long as a specified boolean condition remains True. It is ideal when the number of iterations depends on runtime logic.\n\nLoop control statements:\n- break: Immediately terminates the loop.\n- continue: Skips the rest of the current iteration and jumps to the next one.",
+      "code_example": "# 1. For loop with range()\nprint(\"Counting 1 to 5:\")\nfor i in range(1, 6):\n    print(i, end=\" \")\nprint() # Newline\n\n# 2. While loop example\ncountdown = 3\nwhile countdown > 0:\n    print(f\"Launching in {countdown}...\")\n    countdown -= 1\nprint(\"Blast off!\")",
+      "key_points": [
+        "for loops iterate over sequences (like range, lists, or strings).",
+        "while loops repeat as long as a condition evaluates to True.",
+        "range(start, stop, step) generates an arithmetic progression.",
+        "Always ensure while loops have an update condition to prevent infinite loops."
+      ]
+    },
+    {
+      "id": "functions",
+      "subject": "Python Basics",
+      "name": "Functions",
+      "summary": "Functions are reusable blocks of code that perform a specific task when called.",
+      "explanation": "Functions help organize code, eliminate repetition (DRY principle: Don't Repeat Yourself), and make programs modular and easier to maintain.\n\nIn Python:\n- Functions are defined using the 'def' keyword followed by the function name and parentheses ().\n- Parameters are inputs received by the function.\n- Arguments are values passed into the function when calling it.\n- The 'return' statement sends a result back to the caller. If no return statement is written, the function returns None.",
+      "code_example": "# Defining a reusable function\ndef calculate_discount(price, discount_percent):\n    \"\"\"Calculates final price after applying discount.\"\"\"\n    discount_amount = price * (discount_percent / 100)\n    final_price = price - discount_amount\n    return final_price\n\n# Calling the function\nitem_price = 500\nfinal = calculate_discount(item_price, 20)\nprint(f\"Original: ₹{item_price}, Discounted: ₹{final}\")",
+      "key_points": [
+        "Functions are created using the 'def' keyword.",
+        "Functions can take zero or more parameters as input.",
+        "The 'return' keyword outputs data back to where the function was called.",
+        "Functions promote modularity, readability, and code reuse."
+      ]
+    }
+  ]
+}

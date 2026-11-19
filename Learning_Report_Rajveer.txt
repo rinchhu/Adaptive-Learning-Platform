@@ -1,0 +1,25 @@
+================================================================================
+          ADAPTIVE LEARNING PLATFORM - STUDENT PROGRESS REPORT
+                    Aligned with UN SDG 4: Quality Education
+================================================================================
+Student Name            : Rajveer
+Report Generated On     : 2026-11-19 09:21:53
+Current Adaptive Level  : EASY
+Curriculum Topics Done  : 0 of 5 Mastered
+--------------------------------------------------------------------------------
+TOPIC BREAKDOWN:
+--------------------------------------------------------------------------------
+  • Variables                | Status: In Progress     | Attempts: 1   | Best Score: 66.7%
+  • Data Types               | Status: Not Started     | Attempts: 0   | Best Score: 0%
+  • Conditional Statements   | Status: Not Started     | Attempts: 0   | Best Score: 0%
+  • Loops                    | Status: Not Started     | Attempts: 0   | Best Score: 0%
+  • Functions                | Status: Not Started     | Attempts: 0   | Best Score: 0%
+--------------------------------------------------------------------------------
+RECENT QUIZ ATTEMPTS (LAST 5):
+--------------------------------------------------------------------------------
+  [2026-11-19 09:13:06] Variables       (Easy Level) -> Score: 2/3 (66.7%)
+================================================================================
+                   UNITED NATIONS SDG 4 : QUALITY EDUCATION
+   Ensuring inclusive and equitable quality education and promoting lifelong
+                      learning opportunities for all.
+================================================================================

@@ -1,0 +1,101 @@
+{
+  "active_student": "Rohan",
+  "students": {
+    "vanshika": {
+      "current_difficulty": "Easy",
+      "completed_topics": [],
+      "recommended_next_topic": "Variables",
+      "topic_progress": {
+        "Variables": {
+          "status": "In Progress",
+          "attempts": 1,
+          "highest_score": 66.7,
+          "last_score": 66.7,
+          "level": "Easy"
+        },
+        "Data Types": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Conditional Statements": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Loops": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Functions": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        }
+      },
+      "quiz_history": [
+        {
+          "topic": "Variables",
+          "difficulty": "Easy",
+          "score": 2,
+          "total": 3,
+          "percentage": 66.7,
+          "promoted_to": "Easy",
+          "timestamp": "2026-11-19 09:13:06"
+        }
+      ]
+    },
+    "Rohan": {
+      "current_difficulty": "Easy",
+      "completed_topics": [],
+      "recommended_next_topic": "Variables",
+      "topic_progress": {
+        "Variables": {
+          "status": "Mastered",
+          "attempts": 0,
+          "highest_score": 100,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Data Types": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Conditional Statements": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Loops": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        },
+        "Functions": {
+          "status": "Not Started",
+          "attempts": 0,
+          "highest_score": 0,
+          "last_score": 0,
+          "level": "Easy"
+        }
+      },
+      "quiz_history": []
+    }
+  }
+}
